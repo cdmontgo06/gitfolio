@@ -1,664 +1,911 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+<html lang="en"> 
+    
+<head> 
+    
+    <meta charset="UTF-8"> 
+    <meta 
+        name="viewport" 
+        content="width=device-width, initial-scale=1.0"
+        > 
     <meta
         name="description"
         content="Connor Montgomery — astrophysics, robotics, computational research, engineering, and exploration."
-    >
+        >
 
-    <meta name="theme-color" content="#05070d">
+    <meta name="author" content="Connor D. Montgomery">
 
-    <title>Connor Montgomery | Astrophysics · Robotics · Exploration</title>
+    <title>Connor Montgomery | Astrophysics × Robotics × Exploration</title>
 
     <link rel="stylesheet" href="style.css">
+
 </head>
+<body> 
 
-<body>
+<!-- =========================================================
+     NAVIGATION
+========================================================== -->
 
-    <!-- =========================
-         NAVIGATION
-    ========================== -->
+<header class="site-header">
+    <nav class="nav-container">
 
-    <header class="site-header">
-        <nav class="nav container">
+        <a href="#top" class="logo">
+            Connor Montgomery
+        </a>
 
-            <a href="#top" class="logo">
-                <span class="logo-mark">CM</span>
-                <span class="logo-name">Connor Montgomery</span>
+        <div class="nav-links">
+            <a href="#about">About</a>
+            <a href="#work">Work</a>
+            <a href="#experience">Experience</a>
+            <a href="#contact">Contact</a>
+        </div>
+
+    </nav>
+</header>
+
+
+<!-- =========================================================
+     MAIN CONTENT
+========================================================== -->
+
+<main id="top">
+
+    <!-- =====================================================
+         HERO / INTRODUCTION
+    ====================================================== -->
+
+    <section class="hero" id="intro">
+
+        <!--
+            IMAGE PLACEHOLDER
+
+            Replace this div with an image later.
+
+            Suggested possibilities:
+            - NASA Astronomy Picture of the Day
+            - Artemis II imagery
+            - Personal astronomy photograph
+            - Portrait / engineering photograph
+            - Other image that represents exploration
+
+            Example:
+
+            <img
+                src="images/hero/hero.jpg"
+                alt="Description of image"
+                class="hero-image"
+            >
+        -->
+
+        <div class="hero-image-placeholder">
+            <span>HERO IMAGE PLACEHOLDER</span>
+            <small>NASA / ARTEMIS / PERSONAL IMAGE</small>
+        </div>
+
+
+        <div class="hero-content">
+
+            <p class="section-label">
+                01 / INTRODUCTION
+            </p>
+
+            <p class="hero-location">
+                PITTSBURGH, PA · CARNEGIE MELLON UNIVERSITY · CLASS OF 2029
+            </p>
+
+            <h1>
+                Connor<br>
+                Montgomery
+            </h1>
+
+            <div class="hero-disciplines">
+                <span>ASTROPHYSICS</span>
+                <span>ROBOTICS</span>
+                <span>EXPLORATION</span>
+            </div>
+
+            <p class="hero-text">
+                I work at the intersection of science, computation,
+                engineering, and hands-on experimentation — investigating
+                questions about the universe while building systems to
+                explore the world around me.
+            </p>
+
+            <a href="#work" class="button">
+                Explore my work
+                <span aria-hidden="true">↓</span>
             </a>
 
-            <div class="nav-links">
-                <a href="#about">About</a>
-                <a href="#work">Work</a>
-                <a href="#experience">Experience</a>
-                <a href="#contact">Contact</a>
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         ABOUT
+    ====================================================== -->
+
+    <section class="about section-light" id="about">
+
+        <div class="section-container">
+
+            <div class="section-heading">
+
+                <p class="section-label">
+                    02 / THE PERSON
+                </p>
+
+                <h2>
+                    More than<br>
+                    one discipline.
+                </h2>
+
             </div>
 
-            <span class="nav-status">
-                <span class="status-dot"></span>
-                Pittsburgh, PA
-            </span>
 
-        </nav>
-    </header>
+            <div class="about-grid">
 
-
-    <main id="top">
-
-        <!-- =========================
-             HERO / OBSERVATORY
-        ========================== -->
-
-        <section class="hero">
-
-            <div class="hero-background">
                 <!--
-                    FUTURE IMAGE:
-                    Replace this background with a NASA/APOD,
-                    Artemis II image, or your own photograph.
+                    IMAGE PLACEHOLDER
 
-                    Suggested future path:
-                    images/hero/hero.jpg
+                    Suggested image:
+                    - Portrait
+                    - Photo at CMU
+                    - Research/lab photograph
+                    - Engineering photograph
+                    - Personal photograph
+
+                    Example:
+
+                    <img
+                        src="images/personal/portrait.jpg"
+                        alt="Connor Montgomery"
+                        class="about-image"
+                    >
                 -->
-                <div class="hero-image-placeholder">
-                    <span>HERO IMAGE</span>
-                    <small>NASA / ARTEMIS / PERSONAL PHOTOGRAPH</small>
+
+                <div class="about-image-placeholder">
+                    <span>ABOUT IMAGE PLACEHOLDER</span>
+                    <small>PORTRAIT / CMU / LAB / PERSONAL</small>
                 </div>
 
-                <div class="hero-stars"></div>
-            </div>
 
-            <div class="container hero-content">
+                <div class="about-content">
 
-                <div class="hero-meta">
-                    <span>01 / INTRODUCTION</span>
-                    <span>CMU · CLASS OF 2029</span>
-                </div>
-
-                <div class="hero-title-wrap">
-
-                    <p class="hero-kicker">
-                        Astrophysics × Robotics × Exploration
+                    <p class="lead">
+                        I'm Connor Montgomery, an astrophysics student at
+                        Carnegie Mellon University pursuing a minor in
+                        robotics.
                     </p>
-
-                    <h1>
-                        Connor
-                        <span>Montgomery</span>
-                    </h1>
-
-                </div>
-
-                <div class="hero-bottom">
-
-                    <p class="hero-description">
-                        I work across science, computation, engineering,
-                        and hands-on experimentation — investigating the
-                        universe while building things to explore it.
-                    </p>
-
-                    <a href="#work" class="hero-link">
-                        <span>Explore my work</span>
-                        <span class="arrow">↓</span>
-                    </a>
-
-                </div>
-
-            </div>
-
-            <div class="hero-coordinates">
-                <span>40.4432° N</span>
-                <span>79.9436° W</span>
-            </div>
-
-        </section>
-
-
-        <!-- =========================
-             ABOUT
-        ========================== -->
-
-        <section id="about" class="about section-light">
-
-            <div class="container">
-
-                <div class="section-label">
-                    <span>02</span>
-                    <span>ABOUT</span>
-                </div>
-
-                <div class="about-grid">
-
-                    <div class="about-image image-placeholder">
-                        <span>YOUR PHOTO</span>
-                        <small>
-                            PORTRAIT / CMU / LAB / FIELD
-                        </small>
-                    </div>
-
-                    <div class="about-content">
-
-                        <p class="section-kicker">
-                            A student, researcher, builder, and whatever
-                            the problem requires.
-                        </p>
-
-                        <h2>
-                            I don't fit neatly
-                            <em>into one label.</em>
-                        </h2>
-
-                        <p class="large-copy">
-                            I'm Connor Montgomery, an astrophysics student
-                            at Carnegie Mellon University with a minor in
-                            robotics. I'm interested in problems that sit
-                            between disciplines — where physics meets
-                            computation, where engineering meets
-                            experimentation, and where ideas have to
-                            eventually work in the real world.
-                        </p>
-
-                        <p>
-                            My work has taken me from computational
-                            astrophysics and high-performance computing
-                            to aircraft design, avionics, CAD, fabrication,
-                            and data analysis. I enjoy learning the system
-                            deeply enough to understand not only what
-                            works, but why.
-                        </p>
-
-                        <div class="about-details">
-
-                            <div>
-                                <span class="detail-label">EDUCATION</span>
-                                <strong>Carnegie Mellon University</strong>
-                                <span>B.S. Astrophysics · Minor Robotics</span>
-                                <span>Expected 2029</span>
-                            </div>
-
-                            <div>
-                                <span class="detail-label">FOCUS</span>
-                                <strong>Science + Engineering</strong>
-                                <span>Research · Computation · Robotics</span>
-                            </div>
-
-                            <div>
-                                <span class="detail-label">LANGUAGES</span>
-                                <strong>English</strong>
-                                <span>Spanish · Intermediate</span>
-                            </div>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- =========================
-             SKILLS / TOOLBOX
-        ========================== -->
-
-        <section class="toolbox section-paper">
-
-            <div class="container">
-
-                <div class="section-label dark">
-                    <span>03</span>
-                    <span>TOOLBOX</span>
-                </div>
-
-                <div class="toolbox-heading">
-                    <h2>
-                        Different problems
-                        <span>require different tools.</span>
-                    </h2>
-                </div>
-
-                <div class="toolbox-grid">
-
-                    <div class="toolbox-item">
-                        <span class="tool-number">01</span>
-                        <h3>Computing</h3>
-                        <p>
-                            Python · C++ · JavaScript · HTML · Linux ·
-                            Command Line · SLURM · HPC · JupyterLab
-                        </p>
-                    </div>
-
-                    <div class="toolbox-item">
-                        <span class="tool-number">02</span>
-                        <h3>Engineering</h3>
-                        <p>
-                            SolidWorks · CAD · FEA · KiCad · Arduino ·
-                            3D Printing · Electronics
-                        </p>
-                    </div>
-
-                    <div class="toolbox-item">
-                        <span class="tool-number">03</span>
-                        <h3>Research</h3>
-                        <p>
-                            Computational astrophysics · Data analysis ·
-                            Simulation · Visualization · Scientific computing
-                        </p>
-                    </div>
-
-                    <div class="toolbox-item">
-                        <span class="tool-number">04</span>
-                        <h3>Communication</h3>
-                        <p>
-                            Research presentations · Technical writing ·
-                            Debate · Leadership · Mentorship
-                        </p>
-                    </div>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- =========================
-             SELECTED WORK
-        ========================== -->
-
-        <section id="work" class="work section-dark">
-
-            <div class="container">
-
-                <div class="section-label">
-                    <span>04</span>
-                    <span>SELECTED WORK</span>
-                </div>
-
-                <div class="work-intro">
-
-                    <h2>
-                        Building things.
-                        <br>
-                        <em>Understanding things.</em>
-                    </h2>
 
                     <p>
-                        Two very different projects, connected by the same
-                        instinct: understand the system, find the interesting
-                        problem, and figure out how to make it work.
+                        I'm interested in problems that don't fit neatly
+                        into one discipline. My work moves between physics,
+                        scientific computing, engineering, robotics, and
+                        hands-on experimentation.
+                    </p>
+
+                    <p>
+                        That might mean investigating simulated
+                        high-redshift active galactic nuclei against
+                        observations from the James Webb Space Telescope,
+                        or turning decades-old aircraft plans into modern
+                        CAD models and engineering analyses.
+                    </p>
+
+                    <p>
+                        I like understanding how things work — especially
+                        when understanding them requires crossing the
+                        boundary between theory and practice.
                     </p>
 
                 </div>
 
+            </div>
 
-                <!-- PROJECT 01 -->
 
-                <article class="project project-aircraft">
+            <!-- CURRENTLY -->
 
-                    <div class="project-header">
+            <div class="currently">
 
-                        <div>
-                            <span class="project-number">01</span>
-                            <span class="project-category">
-                                ENGINEERING · AVIONICS · FABRICATION
-                            </span>
-                        </div>
+                <div class="currently-heading">
+                    <p class="section-label">
+                        CURRENTLY
+                    </p>
+                </div>
 
-                        <span class="project-status">
-                            IN DEVELOPMENT
-                        </span>
+                <div class="currently-grid">
 
+                    <div class="info-item">
+                        <span class="info-label">EDUCATION</span>
+                        <strong>Carnegie Mellon University</strong>
+                        <span>B.S. Astrophysics · Minor Robotics</span>
+                        <span>Expected 2029</span>
                     </div>
 
-                    <div class="project-title">
-                        <h3>Ultralight</h3>
-                        <p>
-                            Turning paper aircraft plans into a
-                            computationally designed, analyzed, and
-                            instrumented aircraft.
+                    <div class="info-item">
+                        <span class="info-label">RESEARCH</span>
+                        <strong>Computational Astrophysics</strong>
+                        <span>AGN · JWST · BlueTides · Synthesizer</span>
+                        <span>Vera HPC</span>
+                    </div>
+
+                    <div class="info-item">
+                        <span class="info-label">ENGINEERING</span>
+                        <strong>Ultralight Aircraft</strong>
+                        <span>CAD · FEA · Avionics</span>
+                        <span>Arduino · KiCad · Flight Data</span>
+                    </div>
+
+                    <div class="info-item">
+                        <span class="info-label">COMPUTING</span>
+                        <strong>Scientific Computing</strong>
+                        <span>Python · C++ · JavaScript</span>
+                        <span>Linux · SLURM · HPC</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         SELECTED WORK
+    ====================================================== -->
+
+    <section class="work section-dark" id="work">
+
+        <div class="section-container">
+
+            <div class="section-heading work-heading">
+
+                <p class="section-label">
+                    03 / SELECTED WORK
+                </p>
+
+                <h2>
+                    Building.<br>
+                    Investigating.<br>
+                    Understanding.
+                </h2>
+
+                <p class="section-intro">
+                    A selection of projects where science, engineering,
+                    computation, and experimentation overlap.
+                </p>
+
+            </div>
+
+
+            <!-- =================================================
+                 PROJECT 01 — ULTRALIGHT
+            ================================================== -->
+
+            <article class="project project-aircraft">
+
+                <div class="project-header">
+
+                    <div>
+                        <span class="project-number">01</span>
+
+                        <p class="project-category">
+                            ENGINEERING · AEROSPACE
                         </p>
+
+                        <h3>
+                            Ultralight<br>
+                            Fabrication
+                        </h3>
                     </div>
 
-                    <div class="project-hero-image image-placeholder">
-                        <span>ULTRALIGHT PHOTO</span>
-                        <small>
-                            AIRCRAFT / CAD / FABRICATION
-                        </small>
-                    </div>
+                    <span class="project-status">
+                        IN PROGRESS
+                    </span>
 
-                    <div class="project-story">
-
-                        <div class="project-story-intro">
-                            <span>THE PROCESS</span>
-                            <p>
-                                A Part 103 ultralight aircraft project
-                                spanning mechanical design, computational
-                                analysis, fabrication, electronics,
-                                and flight data.
-                            </p>
-                        </div>
-
-                        <div class="process-line">
-
-                            <div class="process-step">
-                                <span>01</span>
-                                <strong>Paper Plans</strong>
-                                <p>
-                                    Translating preexisting engineering
-                                    drawings into digital models.
-                                </p>
-                            </div>
-
-                            <div class="process-step">
-                                <span>02</span>
-                                <strong>CAD</strong>
-                                <p>
-                                    Building and modifying the aircraft
-                                    geometry in SolidWorks.
-                                </p>
-                            </div>
-
-                            <div class="process-step">
-                                <span>03</span>
-                                <strong>Analysis</strong>
-                                <p>
-                                    FEA and engineering analysis to
-                                    investigate design changes.
-                                </p>
-                            </div>
-
-                            <div class="process-step">
-                                <span>04</span>
-                                <strong>Prototype</strong>
-                                <p>
-                                    Producing scale 3D-printed models
-                                    to visualize and validate designs.
-                                </p>
-                            </div>
-
-                            <div class="process-step">
-                                <span>05</span>
-                                <strong>Avionics</strong>
-                                <p>
-                                    Designing control electronics,
-                                    PCBs, sensors, and flight systems.
-                                </p>
-                            </div>
-
-                            <div class="process-step">
-                                <span>06</span>
-                                <strong>Data</strong>
-                                <p>
-                                    Arduino, C++, and Python systems for
-                                    collecting and visualizing flight data.
-                                </p>
-                            </div>
-
-                        </div>
-
-                    </div>
-
-                    <div class="project-gallery">
-
-                        <div class="gallery-placeholder">
-                            <span>CAD MODEL</span>
-                        </div>
-
-                        <div class="gallery-placeholder">
-                            <span>FEA</span>
-                        </div>
-
-                        <div class="gallery-placeholder">
-                            <span>3D PRINT</span>
-                        </div>
-
-                        <div class="gallery-placeholder">
-                            <span>KICAD PCB</span>
-                        </div>
-
-                    </div>
-
-                </article>
+                </div>
 
 
-                <!-- PROJECT 02 -->
+                <!--
+                    LARGE PROJECT IMAGE PLACEHOLDER
 
-                <article class="project project-astrophysics">
+                    Suggested image:
+                    - Finished aircraft
+                    - Aircraft under construction
+                    - Flight photograph
 
-                    <div class="project-header">
+                    Example:
 
-                        <div>
-                            <span class="project-number">02</span>
-                            <span class="project-category">
-                                ASTROPHYSICS · HPC · JWST
-                            </span>
-                        </div>
+                    <img
+                        src="images/projects/ultralight/aircraft.jpg"
+                        alt="Ultralight aircraft"
+                        class="project-image"
+                    >
+                -->
 
-                        <span class="project-status">
-                            RESEARCH
-                        </span>
+                <div class="project-image-placeholder">
+                    <span>PROJECT IMAGE PLACEHOLDER</span>
+                    <small>ULTRALIGHT AIRCRAFT</small>
+                </div>
 
-                    </div>
 
-                    <div class="project-title">
-                        <h3>Seeing the Early Universe</h3>
-                        <p>
-                            Generating mock JWST observations of active
-                            galactic nuclei from cosmological simulations.
+                <div class="project-body">
+
+                    <div class="project-description">
+
+                        <p class="lead">
+                            Turning pre-existing paper aircraft plans
+                            into a modern engineering workflow.
                         </p>
+
+                        <p>
+                            I'm working to transform plans for a Part 103
+                            ultralight aircraft into detailed CAD models,
+                            making engineering changes where appropriate
+                            and using analysis to evaluate the resulting
+                            designs.
+                        </p>
+
+                        <p>
+                            The project combines mechanical design,
+                            computational engineering, electronics, and
+                            software — including FEA, scale-model
+                            prototyping, custom avionics, and flight-data
+                            systems.
+                        </p>
+
                     </div>
 
-                    <div class="project-hero-image image-placeholder">
+
+                    <div class="project-process">
+
+                        <p class="process-label">
+                            DEVELOPMENT PROCESS
+                        </p>
+
+                        <div class="process-list">
+
+                            <span>
+                                <strong>01</strong>
+                                PAPER PLANS
+                            </span>
+
+                            <span>
+                                <strong>02</strong>
+                                CAD MODEL
+                            </span>
+
+                            <span>
+                                <strong>03</strong>
+                                ENGINEERING ANALYSIS
+                            </span>
+
+                            <span>
+                                <strong>04</strong>
+                                SCALE 3D PRINT
+                            </span>
+
+                            <span>
+                                <strong>05</strong>
+                                AVIONICS
+                            </span>
+
+                            <span>
+                                <strong>06</strong>
+                                FLIGHT DATA
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- PROJECT GALLERY PLACEHOLDERS -->
+
+                <div class="project-gallery">
+
+                    <div class="gallery-placeholder">
+                        <span>CAD IMAGE</span>
+                    </div>
+
+                    <div class="gallery-placeholder">
+                        <span>FEA IMAGE</span>
+                    </div>
+
+                    <div class="gallery-placeholder">
+                        <span>3D PRINT IMAGE</span>
+                    </div>
+
+                    <div class="gallery-placeholder">
+                        <span>KI-CAD / PCB IMAGE</span>
+                    </div>
+
+                </div>
+
+
+                <div class="project-tools">
+
+                    <span>SolidWorks</span>
+                    <span>FEA</span>
+                    <span>KiCad</span>
+                    <span>Arduino</span>
+                    <span>C++</span>
+                    <span>Python</span>
+                    <span>Flight Data</span>
+
+                </div>
+
+            </article>
+
+
+            <!-- =================================================
+                 PROJECT 02 — JWST / BLUETIDES
+            ================================================== -->
+
+            <article class="project project-research">
+
+                <div class="project-header">
+
+                    <div>
+                        <span class="project-number">02</span>
+
+                        <p class="project-category">
+                            RESEARCH · COMPUTATIONAL ASTROPHYSICS
+                        </p>
+
+                        <h3>
+                            Seeing the Universe<br>
+                            Before We Could
+                        </h3>
+                    </div>
+
+                    <span class="project-status">
+                        2026 RESEARCH
+                    </span>
+
+                </div>
+
+
+                <!--
+                    LARGE RESEARCH IMAGE PLACEHOLDER
+
+                    Suggested image:
+                    - Mock JWST image
+                    - NIRCam visualization
+                    - AGN visualization
+
+                    Example:
+                        <img
+                        src="images/projects/research/jwst-mock.jpg"
+                        alt="Mock JWST observation of a simulated AGN"
+                        class="project-image"
+                    >
+                -->
+
+                <div class="project-image-placeholder">
+                    <span>PROJE
+                        CT IMAGE PLACEHOLDER</span>
+                    <small>MOCK JWST / AGN / NIRCam</small>
+                </div>
+
+
+                <div class="project-body">
+
+                    <div class="project-description">
+
+                        <p class="lead">
+                            Generating mock observations of high-redshift
+                            active galactic nuclei to understand how
+                            simulated galaxies might appear to JWST.
+                        </p>
+
+                        <p>
+                            During my 2026 Summer Undergraduate Research
+                            Apprenticeship at Carnegie Mellon University,
+                            I worked with simulation data from BlueTides
+                            and Astrid to generate synthetic observations
+                            that could be compared with real James Webb
+                            Space Telescope data.
+                        </p>
+
+                        <p>
+                            Working on CMU's Vera supercomputing cluster,
+                            I investigated how physical parameters in AGN
+                            emission models affected spectral energy
+                            distributions, photometry, and mock NIRCam
+                            observations.
+                        </p>
+
+                        <p>
+                            Along the way, I worked directly with large
+                            HDF5 emission grids, debugged the mock
+                            observation pipeline, validated results
+                            numerically, and identified a parameter
+                            propagation issue that prevented several AGN
+                            parameters from affecting generated spectra.
+                        </p>
+
+                    </div>
+
+
+                    <div class="research-details">
+
+                        <div class="research-stat">
+                            <span class="info-label">SIMULATION</span>
+                            <strong>BlueTides</strong>
+                            <span>High-redshift galaxy formation</span>
+                        </div>
+
+                        <div class="research-stat">
+                            <span class="info-label">OBSERVATORY</span>
+                            <strong>JWST</strong>
+                            <span>NIRCam mock observations</span>
+                        </div>
+
+                        <div class="research-stat">
+                            <span class="info-label">COMPUTING</span>
+                            <strong>Vera HPC</strong>
+                            <span>CMU Supercomputing Cluster</span>
+                        </div>
+
+                        <div class="research-stat">
+                            <span class="info-label">MODELING</span>
+                            <strong>Synthesizer</strong>
+                            <span>AGN emission grids</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- RESEARCH VISUALIZATION GALLERY -->
+
+                <div class="project-gallery research-gallery">
+
+                    <div class="gallery-placeholder gallery-large">
                         <span>MOCK JWST IMAGE</span>
-                        <small>
-                            BLUETIDES / SYNTHESIZER / NIRCAM
-                        </small>
+                        <small>NIRCAM / AGN</small>
                     </div>
 
-                    <div class="research-grid">
+                    <div class="gallery-placeholder">
+                        <span>SED PLOT</span>
+                        <small>SPECTRAL ENERGY DISTRIBUTION</small>
+                    </div>
 
-                        <div class="research-description">
+                    <div class="gallery-placeholder">
+                        <span>FLUX ANALYSIS</span>
+                        <small>PHOTOMETRY / PARAMETER SENSITIVITY</small>
+                    </div>
 
-                            <span class="research-label">
-                                SUMMER 2026 · CMU
+                    <div class="gallery-placeholder">
+                        <span>CODE / HDF5 / GRID</span>
+                        <small>COMPUTATIONAL WORKFLOW</small>
+                    </div>
+
+                </div>
+
+
+                <div class="project-tools">
+
+                    <span>Python</span>
+                    <span>Jupyter</span>
+                    <span>Synthesizer</span>
+                    <span>BlueTides</span>
+                    <span>Astrid</span>
+                    <span>JWST</span>
+                    <span>NIRCam</span>
+                    <span>HPC</span>
+                    <span>Linux</span>
+                    <span>SLURM</span>
+
+                </div>
+
+            </article>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         EXPERIENCE / BEYOND THE LAB
+    ====================================================== -->
+
+    <section class="experience section-light" id="experience">
+
+        <div class="section-container">
+
+            <div class="section-heading">
+
+                <p class="section-label">
+                    04 / BEYOND THE LAB
+                </p>
+
+                <h2>
+                    The work<br>
+                    between the work.
+                </h2>
+
+                <p class="section-intro">
+                    Research and engineering are only part of what I do.
+                    Leadership, communication, service, and competition
+                    have shaped how I approach problems and work with
+                    other people.
+                </p>
+
+            </div>
+
+
+            <div class="timeline">
+
+                <!-- 2026 RESEARCH -->
+
+                <article class="timeline-item">
+
+                    <div class="timeline-date">
+                        2026
+                    </div>
+
+                    <div class="timeline-marker">
+                        <span></span>
+                    </div>
+
+                    <div class="timeline-content">
+
+                        <p class="timeline-category">
+                            RESEARCH
+                            <h3>
+                                Summer Undergraduate
+                                Research Apprenticeship
+                            </h3>
+
+                            <p>
+                                Investigated mock observations of high-redshift
+                                AGNs using BlueTides simulation data, JWST
+                                observations, Synthesizer emission grids, and
+                                CMU's Vera supercomputing cluster.
+                            </p>
+
+                            <span class="timeline-detail">
+                                BlueTides · JWST · AGN · HPC
                             </span>
 
-                            <p>
-                                As an undergraduate research intern, I
-                                worked on a computational astrophysics
-                                project comparing simulated high-redshift
-                                active galactic nuclei with observations
-                                from the James Webb Space Telescope.
+                        </div>
+
+                    </article>
+
+
+                    <!-- 2026 PRE-COLLEGE -->
+
+                    <article class="timeline-item">
+
+                        <div class="timeline-date">
+                            2026
+                        </div>
+
+                        <div class="timeline-marker">
+                            <span></span>
+                        </div>
+
+                        <div class="timeline-content">
+
+                            <p class="timeline-category">
+                                LEADERSHIP · COMMUNITY
                             </p>
 
-                            <p>
-                                The work involved BlueTides simulation
-                                data, the Vera supercomputer, Synthesizer,
-                                AGN emission models, spectral energy
-                                distributions, photometry, and mock
-                                NIRCam images.
-                            </p>
+                            <h3>
+                                CMU Pre-College
+                                Programs
+                            </h3>
 
                             <p>
-                                As the project progressed, my work shifted
-                                from learning an existing pipeline to
-                                investigating parameter sensitivity,
-                                validating results, debugging the underlying
-                                software, and modifying the computational
-                                workflow itself.
+                                Served as a Residential Advisor for more than
+                                30 first-time college students while supporting
+                                a community of more than 700 pre-college
+                                students and staff.
                             </p>
 
-                        </div>
-
-                        <div class="research-stats">
-
-                            <div>
-                                <strong>7D</strong>
-                                <span>AGN emission grids</span>
-                            </div>
-
-                            <div>
-                                <strong>z = 7</strong>
-                                <span>High-redshift system</span>
-                            </div>
-
-                            <div>
-                                <strong>30 GB+</strong>
-                                <span>Production grid files</span>
-                            </div>
-
-                            <div>
-                                <strong>Vera</strong>
-                                <span>CMU HPC system</span>
-                            </div>
+                            <span class="timeline-detail">
+                                Residential Advisor · 700+ students
+                            </span>
 
                         </div>
 
-                    </div>
+                    </article>
 
-                    <div class="research-visuals">
 
-                        <div class="research-image large image-placeholder">
-                            <span>SED / SPECTRUM</span>
+                    <!-- 2026 ORIENTATION -->
+
+                    <article class="timeline-item">
+
+                        <div class="timeline-date">
+                            2026
                         </div>
 
-                        <div class="research-image image-placeholder">
-                            <span>MOCK IMAGE</span>
+                        <div class="timeline-marker">
+                            <span></span>
                         </div>
 
-                        <div class="research-image image-placeholder">
-                            <span>DATA / GRAPH</span>
+                        <div class="timeline-content">
+
+                            <p class="timeline-category">
+                                LEADERSHIP · EVENTS
+                            </p>
+
+                            <h3>
+                                CMU Orientation
+                            </h3>
+
+                            <p>
+                                Designed and carried out orientation-week
+                                programming for more than 1,500 incoming
+                                Carnegie Mellon students as a member of the
+                                university's ProStaff.
+                            </p>
+
+                            <span class="timeline-detail">
+                                1,500+ students · Event programming
+                            </span>
+
                         </div>
 
-                    </div>
+                    </article>
 
-                    <div class="research-takeaway">
 
-                        <span>ONE OF THE KEY LESSONS</span>
+                    <!-- 2025 BLOOD DRIVE -->
 
-                        <blockquote>
-                            A result is only as good as the assumptions
-                            it is built upon.
-                        </blockquote>
+                    <article class="timeline-item">
+
+                        <div class="timeline-date">
+                            2025
+                        </div>
+
+                        <div class="timeline-marker">
+                            <span></span>
+                        </div>
+
+                        <div class="timeline-content">
+
+                            <p class="timeline-category">
+                                SERVICE · ORGANIZATION
+                            </p>
+
+                            <h3>
+                                Community Blood Drive
+                            </h3>
+
+                            <p>
+                                Proposed and organized a local blood drive
+                                through the National Honor Society, coordinating
+                                more than 30 volunteers and partnering with the
+                                Red Cross to collect more than 100 pints of
+                                blood.
+                            </p>
+
+                            <span class="timeline-detail">
+                                30+ volunteers · 100+ pints
+                            </span>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- 2022–2025 EXTRACURRICULARS -->
+
+                    <article class="timeline-item">
+
+                        <div class="timeline-date">
+                            2022–25
+                        </div>
+
+                        <div class="timeline-marker">
+                            <span></span>
+                        </div>
+
+                        <div class="timeline-content">
+
+                            <p class="timeline-category">
+                                COMPETITION · PERFORMANCE
+                            </p>
+
+                            <h3>
+                                Track · Debate · Theater
+                            </h3>
+
+                            <p>
+                                Competed, performed, coached, and led across
+                                three very different environments — serving as
+                                a track captain and hurdle coach, team president
+                                and commentary debater, and a musical theater
+                                lead across six productions.
+                            </p>
+
+                            <span class="timeline-detail">
+                                Captain · President · Coach · Performer
+                            </span>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+
+                <!-- LEADERSHIP SNAPSHOT -->
+
+                <div class="leadership-grid">
+
+                    <div class="leadership-card">
+
+                        <span class="info-label">
+                            LEADERSHIP
+                        </span>
+
+                        <h3>
+                            National Honor Society
+                        </h3>
 
                         <p>
-                            Investigating the emission grids revealed
-                            limitations in the original workflow and
-                            eventually led to identifying an issue in how
-                            AGN parameters were being passed through the
-                            model. I built a simplified test program,
-                            isolated the problem, and helped correct the
-                            full workflow.
+                            President · 2024–2025
                         </p>
 
                     </div>
 
-                </article>
 
-            </div>
+                    <div class="leadership-card">
 
-        </section>
+                        <span class="info-label">
+                            LEADERSHIP
+                        </span>
 
+                        <h3>
+                            Student Council
+                        </h3>
 
-        <!-- =========================
-             EXPERIENCE
-        ========================== -->
-
-        <section id="experience" class="experience section-paper">
-
-            <div class="container">
-
-                <div class="section-label dark">
-                    <span>05</span>
-                    <span>BEYOND THE LAB</span>
-                </div>
-
-                <div class="experience-heading">
-                    <h2>
-                        The rest of
-                        <em>the story.</em>
-                    </h2>
-
-                    <p>
-                        Research and engineering are only part of what I do.
-                        I have spent just as much time learning how to work
-                        with people, lead teams, communicate ideas, and
-                        take responsibility.
-                    </p>
-                </div>
-
-                <div class="timeline">
-
-                    <div class="timeline-item">
-
-                        <div class="timeline-date">2026</div>
-
-                        <div class="timeline-content">
-                            <span>CARNEGIE MELLON UNIVERSITY</span>
-                            <h3>Pre-College Residential Advisor</h3>
-                            <p>
-                                Mentored 30+ first-time college students
-                                and served emergency response roles for
-                                700+ pre-college students and staff.
-                            </p>
-                        </div>
+                        <p>
+                            President · 2024–2025
+                        </p>
 
                     </div>
 
 
-                    <div class="timeline-item">
+                    <div class="leadership-card">
 
-                        <div class="timeline-date">2026</div>
+                        <span class="info-label">
+                            ATHLETICS
+                        </span>
 
-                        <div class="timeline-content">
-                            <span>CARNEGIE MELLON UNIVERSITY</span>
-                            <h3>Orientation Programming</h3>
-                            <p>
-                                Designed and carried out orientation
-                                programming for more than 1,500 incoming
-                                CMU students.
-                            </p>
-                        </div>
+                        <h3>
+                            Varsity Track & Field
+                        </h3>
 
-                    </div>
-
-
-                    <div class="timeline-item">
-
-                        <div class="timeline-date">2025</div>
-
-                        <div class="timeline-content">
-                            <span>NATIONAL HONOR SOCIETY</span>
-                            <h3>Community Blood Drive</h3>
-                            <p>
-                                Proposed and directed a local blood drive,
-                                coordinating 30+ volunteers and collecting
-                                more than 100 pints for area hospitals.
-                            </p>
-                        </div>
+                        <p>
+                            Team Captain · District Qualifier · Hurdle Coach
+                        </p>
 
                     </div>
 
 
-                    <div class="timeline-item">
+                    <div class="leadership-card">
 
-                        <div class="timeline-date">2022—25</div>
+                        <span class="info-label">
+                            COMMUNICATION
+                        </span>
 
-                        <div class="timeline-content">
-                            <span>BERLIN BROTHERSVALLEY HIGH SCHOOL</span>
-                            <h3>Leadership, Athletics & Arts</h3>
-                            <p>
-                                Student Council President · National Honor
-                                Society President · Track Captain ·
-                                Forensic Speech & Debate President ·
-                                Musical Theater Lead.
-                            </p>
-                        </div>
+                        <h3>
+                            Speech & Debate
+                        </h3>
+
+                        <p>
+                            Team President · Commentary Debater
+                        </p>
 
                     </div>
 
@@ -669,62 +916,111 @@
         </section>
 
 
-        <!-- =========================
+        <!-- =====================================================
              CONTACT
-        ========================== -->
+        ====================================================== -->
 
-        <section id="contact" class="contact">
+        <section class="contact section-dark" id="contact">
 
-            <div class="container">
-
-                <div class="section-label">
-                    <span>06</span>
-                    <span>CONTACT</span>
-                </div>
+            <div class="section-container">
 
                 <div class="contact-content">
 
-                    <p class="contact-kicker">
-                        HAVE AN IDEA?
+                    <p class="section-label">
+                        05 / CONTACT
                     </p>
 
                     <h2>
-                        Let's build
-                        <em>something.</em>
+                        What's<br>
+                        next?
                     </h2>
 
-                    <p class="contact-description">
-                        I'm always interested in interesting problems,
-                        research, engineering projects, and opportunities
-                        to learn something I don't know yet.
+                    <p class="contact-intro">
+                        I'm always interested in meeting people who are
+                        building, researching, exploring, or simply asking
+                        interesting questions.
                     </p>
 
-                    <a
-                        href="mailto:cmontgomery@andrew.cmu.edu"
-                        class="contact-email"
-                    >
-                        cmontgomery@andrew.cmu.edu
-                    </a>
 
                     <div class="contact-links">
+
+                        <a
+                            href="mailto:cmontgomery@andrew.cmu.edu"
+                            class="contact-link"
+                        >
+                            <span class="contact-label">
+                                EMAIL
+                            </span>
+
+                            <span class="contact-value">
+                                cmontgomery@andrew.cmu.edu
+                            </span>
+
+                            <span class="contact-arrow" aria-hidden="true">
+                                ↗
+                            </span>
+                        </a>
+
 
                         <a
                             href="https://www.linkedin.com/in/cdmontgo"
                             target="_blank"
                             rel="noopener noreferrer"
+                            class="contact-link"
                         >
-                            LinkedIn ↗
+                            <span class="contact-label">
+                                LINKEDIN
+                            </span>
+
+                            <span class="contact-value">
+                                linkedin.com/in/cdmontgo
+                            </span>
+
+                            <span class="contact-arrow" aria-hidden="true">
+                                ↗
+                            </span>
                         </a>
+
 
                         <a
                             href="https://github.com/cdmontgo06"
                             target="_blank"
                             rel="noopener noreferrer"
+                            class="contact-link"
                         >
-                            GitHub ↗
+                            <span class="contact-label">
+                                GITHUB
+                            </span>
+
+                            <span class="contact-value">
+                                github.com/cdmontgo06
+                            </span>
+
+                            <span class="contact-arrow" aria-hidden="true">
+                                ↗
+                            </span>
                         </a>
 
                     </div>
+
+                </div>
+
+
+                <div class="contact-footer">
+
+                    <div class="contact-tagline">
+                        <span>ASTROPHYSICS</span>
+                        <span>×</span>
+                        <span>ROBOTICS</span>
+                        <span>×</span>
+                        <span>ENGINEERING</span>
+                        <span>×</span>
+                        <span>EXPLORATION</span>
+                    </div>
+
+                    <p>
+                        Pittsburgh, Pennsylvania · Carnegie Mellon University
+                    </p>
 
                 </div>
 
@@ -735,21 +1031,35 @@
     </main>
 
 
-    <!-- =========================
+    <!-- =========================================================
          FOOTER
-    ========================== -->
+    ========================================================== -->
 
-    <footer class="footer">
+    <footer class="site-footer">
 
-        <div class="container footer-inner">
+        <div class="footer-container">
 
-            <span>© 2026 Connor Montgomery</span>
+            <div>
+                <strong>
+                    Connor Montgomery
+                </strong>
 
-            <span>
-                ASTROPHYSICS · ROBOTICS · EXPLORATION
-            </span>
+                <span>
+                    Astrophysics × Robotics × Exploration
+                </span>
+            </div>
 
-            <a href="#top">Back to top ↑</a>
+            <div class="footer-right">
+
+                <span>
+                    © 2026 Connor D. Montgomery
+                </span>
+
+                <a href="#top">
+                    Back to top ↑
+                </a>
+
+            </div>
 
         </div>
 
@@ -758,5 +1068,5 @@
 
     <script src="script.js"></script>
 
-</body>
-</html>
+    </body>
+    </html>

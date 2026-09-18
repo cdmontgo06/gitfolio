@@ -291,6 +291,15 @@ p {
     transform-origin: center bottom;
 }
 
+.hero-image-credit a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.hero-image-credit a:hover {
+    color: var(--white-muted);
+}
+
 .hero-image-placeholder {
     position: relative;
 

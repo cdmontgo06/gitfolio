@@ -1642,3 +1642,86 @@ p {
         animation-iteration-count: 1 !important;
     }
 }
+
+/* =========================================================
+JAVASCRIPT ENHANCEMENTS
+========================================================= */
+
+.reveal {
+opacity: 0;
+transform: translateY(24px);
+
+transition:
+    opacity 700ms ease,
+    transform 700ms cubic-bezier(0.22, 1, 0.36, 1);
+
+}
+
+.reveal.is-visible {
+opacity: 1;
+transform: translateY(0);
+}
+
+/* Active navigation link */
+
+.nav-links a.is-active {
+color: var(--white);
+}
+
+.nav-links a.is-active::after {
+width: 100%;
+}
+
+/* Header when scrolling */
+
+.site-header {
+transition:
+background 250ms ease,
+backdrop-filter 250ms ease;
+}
+
+.site-header.is-scrolled {
+background: rgba(17, 17, 15, 0.88);
+backdrop-filter: blur(12px);
+}
+
+/* Keyboard focus */
+
+.keyboard-user a:focus-visible {
+outline: 2px solid var(--orange);
+outline-offset: 5px;
+}
+
+/* Loaded images */
+
+img {
+opacity: 1;
+
+transition:
+    opacity 500ms ease;
+
+}
+
+img.is-error {
+opacity: 0.4;
+}
+
+/* Respect reduced motion */
+
+@media (prefers-reduced-motion: reduce) {
+
+.reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+}
+
+.site-header {
+    transition: none;
+}
+
+img {
+    transition: none;
+}
+
+}

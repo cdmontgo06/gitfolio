@@ -252,13 +252,13 @@ p {
     position: relative;
 
     min-height: 100svh;
-    padding: 160px var(--gutter) 80px;
+    padding: 160px 60px 80px;
 
     display: grid;
    /*grid-template-columns: minmax(300px, 0.9fr) minmax(400px, 1.1fr);*/
     grid-template-columns: minmax(300px, 0.95fr) minmax(380px, 1.05fr);
    /*gap: clamp(40px, 7vw, 120px);*/
-    gap: clamp(40px, 6vw, 100px);
+    gap: clamp(30px, 4vw, 120px);
     align-items: end;
 
     overflow: hidden;
@@ -397,8 +397,8 @@ p {
 
 .hero h1 {
     margin-bottom: 30px;
-
-    font-size: clamp(72px, 10vw, 160px);
+    font-size: clamp(64px, 8vw, 130px);
+   /*font-size: clamp(72px, 10vw, 160px);*/
     line-height: 0.79;
 }
 

@@ -507,11 +507,11 @@ p {
 ========================================================= */
 
 .about {
-    padding: clamp(100px, 13vw, 190px) 0;
+    padding: clamp(75px, 9vw, 130px) 0;
 }
 
 .about .section-heading {
-    margin-bottom: 100px;
+    margin-bottom: 75px;
 }
 
 .about-grid {
@@ -698,11 +698,11 @@ p {
 ========================================================= */
 
 .work {
-    padding: clamp(110px, 14vw, 200px) 0;
+    padding: clamp(80px, 10vw, 140px) 0;
 }
 
 .work-heading {
-    margin-bottom: 150px;
+    margin-bottom: 110px;
 }
 
 .project {
@@ -1029,11 +1029,11 @@ p {
 ========================================================= */
 
 .experience {
-    padding: clamp(100px, 14vw, 190px) 0;
+    padding: clamp(75px, 10vw, 135px) 0;
 }
 
 .experience .section-heading {
-    margin-bottom: 120px;
+    margin-bottom: 90px;
 }
 
 .timeline {
@@ -1192,7 +1192,7 @@ p {
 .contact {
     min-height: 100vh;
 
-    padding: clamp(100px, 13vw, 180px) 0 40px;
+    padding: clamp(70px, 9vw, 120px) 0 40px;
 
     display: flex;
     align-items: center;

@@ -122,6 +122,52 @@ const scrollToSection = (target, behavior = "smooth") => {
         return;
     }
 
+    let scrollTarget = target;
+
+    /*
+     * Standard content sections.
+     */
+    const sectionHeading = target.querySelector(
+        ".section-heading"
+    );
+
+    /*
+     * Contact section.
+     *
+     * Contact does not have a .section-heading because its
+     * content is vertically centered inside the section.
+     */
+    const contactContent = target.querySelector(
+        ".contact-content"
+    );
+
+    if (sectionHeading) {
+        scrollTarget = sectionHeading;
+    } else if (contactContent) {
+        scrollTarget = contactContent;
+    }
+
+    /*
+     * Leave a small amount of breathing room above the
+     * section content.
+     */
+    const headerHeight = header
+        ? header.getBoundingClientRect().height
+        : 0;
+
+    const topOffset = headerHeight + 20;
+
+    const targetPosition =
+        scrollTarget.getBoundingClientRect().top +
+        window.scrollY -
+        topOffset;
+
+    window.scrollTo({
+        top: Math.max(0, targetPosition),
+        behavior: prefersReducedMotion ? "auto" : behavior
+    });
+};
+
     /*
      * Prefer the section's main heading as the scroll target.
      *

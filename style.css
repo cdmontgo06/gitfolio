@@ -507,11 +507,15 @@ p {
 ========================================================= */
 
 .about {
-    padding: clamp(75px, 9vw, 130px) 0;
+    padding: clamp(60px, 7vw, 100px) 0;
 }
 
 .about .section-heading {
     margin-bottom: 75px;
+}
+
+.about .section-heading h2 {
+    font-size: clamp(40px, 5vw, 72px);
 }
 
 .about-grid {
@@ -628,7 +632,7 @@ p {
 }
 
 .currently {
-    margin-top: 130px;
+    margin-top: 70px;
 
     border-top: 1px solid var(--line-light);
 }

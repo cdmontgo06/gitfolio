@@ -101,15 +101,36 @@ if ("IntersectionObserver" in window) {
 }
 
 
+
+
 /* =========================================================
    SMOOTH NAVIGATION
 ========================================================= */
+
+/*
+ * Scrolls to the actual visual content of a section rather
+ * than simply scrolling to the section's outer boundary.
+ *
+ * This accounts for the large padding used by the site's
+ * section layouts, so section headings appear near the top
+ * of the viewport.
+ */
 
 const scrollToSection = (target, behavior = "smooth") => {
 
     if (!target) {
         return;
     }
+
+    /*
+     * Prefer the section's main heading as the scroll target.
+     *
+     * This prevents large section padding from leaving the
+     * heading too far down the screen.
+     */
+    const heading = target.querySelector(".section-heading");
+
+    const scrollTarget = heading || target;
 
     const headerHeight = header
         ? header.getBoundingClientRect().height
@@ -118,7 +139,7 @@ const scrollToSection = (target, behavior = "smooth") => {
     const topOffset = headerHeight + 20;
 
     const targetPosition =
-        target.getBoundingClientRect().top +
+        scrollTarget.getBoundingClientRect().top +
         window.scrollY -
         topOffset;
 
@@ -149,14 +170,14 @@ navLinks.forEach((link) => {
 
         scrollToSection(target);
 
-        /*
-         * Update the URL without forcing a page reload.
-         */
         history.pushState(null, "", targetId);
 
     });
 
 });
+
+
+
 
 /* =========================================================
    HANDLE HISTORY NAVIGATION

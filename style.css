@@ -515,7 +515,7 @@ p {
 }
 
 .about .section-heading h2 {
-    font-size: clamp(40px, 5vw, 72px);
+    font-size: clamp(60px, 5vw, 72px);
 }
 
 .about-grid {
@@ -632,7 +632,7 @@ p {
 }
 
 .currently {
-    margin-top: 70px;
+    margin-top: 90px;
 
     border-top: 1px solid var(--line-light);
 }

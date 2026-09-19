@@ -105,12 +105,29 @@ if ("IntersectionObserver" in window) {
    SMOOTH NAVIGATION
 ========================================================= */
 
-/*
- * CSS already provides scroll-behavior: smooth.
- *
- * This handler adds a small amount of JavaScript control so
- * the scroll position accounts for the navigation/header.
- */
+const scrollToSection = (target, behavior = "smooth") => {
+
+    if (!target) {
+        return;
+    }
+
+    const headerHeight = header
+        ? header.getBoundingClientRect().height
+        : 0;
+
+    const topOffset = headerHeight + 20;
+
+    const targetPosition =
+        target.getBoundingClientRect().top +
+        window.scrollY -
+        topOffset;
+
+    window.scrollTo({
+        top: Math.max(0, targetPosition),
+        behavior: prefersReducedMotion ? "auto" : behavior
+    });
+};
+
 
 navLinks.forEach((link) => {
 
@@ -130,27 +147,90 @@ navLinks.forEach((link) => {
 
         event.preventDefault();
 
-        const headerHeight = header
-            ? header.getBoundingClientRect().height
-            : 0;
-
-        const targetPosition =
-            target.getBoundingClientRect().top +
-            window.scrollY -
-            headerHeight;
-
-        window.scrollTo({
-            top: Math.max(0, targetPosition),
-            behavior: prefersReducedMotion ? "auto" : "smooth"
-        });
+        scrollToSection(target);
 
         /*
          * Update the URL without forcing a page reload.
          */
         history.pushState(null, "", targetId);
+
     });
 
 });
+
+/* =========================================================
+   HANDLE HISTORY NAVIGATION
+========================================================= */
+
+window.addEventListener("popstate", () => {
+
+    const currentHash = window.location.hash;
+
+    if (!currentHash) {
+
+        window.scrollTo({
+            top: 0,
+            behavior: prefersReducedMotion ? "auto" : "smooth"
+        });
+
+        return;
+    }
+
+    const target = document.querySelector(currentHash);
+
+    if (!target) {
+        return;
+    }
+
+    scrollToSection(target);
+
+});
+
+
+
+/* =========================================================
+   INITIAL HASH POSITION
+========================================================= */
+
+/*
+ * Handles visitors arriving directly at a URL containing a hash.
+ *
+ * For example:
+ *
+ * index.html#contact
+ *
+ * This is especially important when navigating from another page,
+ * such as:
+ *
+ * bio.html → index.html#contact
+ *
+ * The browser's default hash positioning is overridden so the
+ * requested section appears near the top of the viewport.
+ */
+
+if (window.location.hash) {
+
+    const initialTarget = document.querySelector(
+        window.location.hash
+    );
+
+    if (initialTarget) {
+
+        /*
+         * Wait one frame for the page layout and images to settle
+         * before calculating the final scroll position.
+         */
+        window.requestAnimationFrame(() => {
+
+            scrollToSection(initialTarget, "auto");
+
+        });
+
+    }
+
+}
+
+
 
 
 /* =========================================================

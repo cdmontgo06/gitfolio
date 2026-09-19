@@ -1,1 +1,955 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="A full biography and background."
+    >
+
+    <meta
+        name="author"
+        content="Connor D. Montgomery"
+    >
+
+    <title>Biography | Connor Montgomery</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+
+        /* =====================================================
+           BIO PAGE
+        ====================================================== */
+
+        .bio-page {
+            background: var(--paper);
+            color: var(--black);
+        }
+
+
+        /* =====================================================
+           BIO HEADER
+        ====================================================== */
+
+        .bio-hero {
+            position: relative;
+
+            min-height: 72vh;
+
+            padding:
+                180px
+                var(--gutter)
+                100px;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+
+            border-bottom: 1px solid var(--line-light);
+
+            overflow: hidden;
+        }
+
+        .bio-hero::before {
+            content: "BIO";
+
+            position: absolute;
+
+            top: 100px;
+            right: var(--gutter);
+
+            color: rgba(17, 17, 15, 0.055);
+
+            font-family: var(--display);
+            font-size: clamp(150px, 24vw, 360px);
+            font-weight: 700;
+            letter-spacing: -0.1em;
+            line-height: 0.8;
+
+            pointer-events: none;
+        }
+
+        .bio-hero-content {
+            position: relative;
+            z-index: 2;
+
+            width: min(100%, var(--max-width));
+            margin: 0 auto;
+        }
+
+        .bio-back {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+
+            margin-bottom: 110px;
+
+            color: #77766f;
+
+            font-family: var(--mono);
+            font-size: 9px;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+
+            transition: color 180ms ease;
+        }
+
+        .bio-back:hover {
+            color: var(--orange);
+        }
+
+        .bio-hero h1 {
+            max-width: 1050px;
+
+            margin: 0;
+
+            font-size: clamp(70px, 12vw, 180px);
+            line-height: 0.82;
+            letter-spacing: -0.07em;
+        }
+
+        .bio-hero-intro {
+            max-width: 680px;
+
+            margin-top: 55px;
+
+            color: #57564f;
+
+            font-size: clamp(20px, 2.2vw, 29px);
+            line-height: 1.4;
+            letter-spacing: -0.025em;
+        }
+
+
+        /* =====================================================
+           BIO CONTENT
+        ====================================================== */
+
+        .bio-content {
+            width: min(100%, var(--max-width));
+            margin: 0 auto;
+
+            padding:
+                clamp(100px, 13vw, 180px)
+                var(--gutter);
+        }
+
+        .bio-section {
+            display: grid;
+            grid-template-columns: minmax(180px, 0.35fr) minmax(320px, 1fr);
+
+            gap: clamp(50px, 10vw, 160px);
+
+            padding: 70px 0;
+
+            border-top: 1px solid var(--line-light);
+        }
+
+        .bio-section:first-child {
+            padding-top: 0;
+            border-top: 0;
+        }
+
+        .bio-section-label {
+            padding-top: 8px;
+
+            color: var(--orange);
+
+            font-family: var(--mono);
+            font-size: 9px;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+        }
+
+        .bio-section-content {
+            max-width: 760px;
+        }
+
+        .bio-section-content h2 {
+            margin-bottom: 38px;
+
+            font-size: clamp(42px, 5vw, 72px);
+            line-height: 0.9;
+        }
+
+        .bio-section-content p {
+            max-width: 700px;
+
+            margin-bottom: 24px;
+
+            color: #57564f;
+
+            font-size: 17px;
+            line-height: 1.75;
+        }
+
+        .bio-section-content p:last-child {
+            margin-bottom: 0;
+        }
+
+
+        /* =====================================================
+           BIO HIGHLIGHTS
+        ====================================================== */
+
+        .bio-highlights {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+
+            gap: 1px;
+
+            margin-top: 60px;
+
+            background: var(--line-light);
+        }
+
+        .bio-highlight {
+            min-height: 180px;
+
+            padding: 28px;
+
+            background: var(--paper);
+        }
+
+        .bio-highlight-label {
+            display: block;
+
+            margin-bottom: 25px;
+
+            color: var(--orange);
+
+            font-family: var(--mono);
+            font-size: 9px;
+            letter-spacing: 0.13em;
+        }
+
+        .bio-highlight strong {
+            display: block;
+
+            margin-bottom: 8px;
+
+            font-size: 19px;
+            font-weight: 500;
+            letter-spacing: -0.025em;
+        }
+
+        .bio-highlight span {
+            color: #77766f;
+
+            font-family: var(--mono);
+            font-size: 9px;
+            line-height: 1.6;
+        }
+
+
+        /* =====================================================
+           BIO QUOTE
+        ====================================================== */
+
+        .bio-quote {
+            padding:
+                clamp(90px, 12vw, 160px)
+                0;
+
+            border-top: 1px solid var(--line-light);
+            border-bottom: 1px solid var(--line-light);
+        }
+
+        .bio-quote p {
+            max-width: 1050px;
+
+            margin: 0;
+
+            font-size: clamp(38px, 6vw, 82px);
+            line-height: 0.95;
+            letter-spacing: -0.055em;
+        }
+
+        .bio-quote span {
+            color: var(--orange);
+        }
+
+
+        /* =====================================================
+           BIO CLOSING
+        ====================================================== */
+
+        .bio-closing {
+            padding-top: clamp(100px, 13vw, 170px);
+
+            text-align: left;
+        }
+
+        .bio-closing h2 {
+            max-width: 900px;
+
+            margin-bottom: 45px;
+
+            font-size: clamp(55px, 8vw, 115px);
+            line-height: 0.85;
+        }
+
+        .bio-closing p {
+            max-width: 600px;
+
+            margin-bottom: 45px;
+
+            color: #66655e;
+
+            font-size: 17px;
+            line-height: 1.7;
+        }
+
+        .bio-contact-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 14px;
+
+            padding-bottom: 6px;
+
+            border-bottom: 1px solid var(--black);
+
+            font-family: var(--mono);
+            font-size: 10px;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+
+            transition:
+                color 180ms ease,
+                border-color 180ms ease;
+        }
+
+        .bio-contact-link span:last-child {
+            color: var(--orange);
+
+            font-size: 15px;
+
+            transition: transform 180ms ease;
+        }
+
+        .bio-contact-link:hover {
+            color: var(--orange);
+            border-color: var(--orange);
+        }
+
+        .bio-contact-link:hover span:last-child {
+            transform: translate(3px, -3px);
+        }
+
+
+        /* =====================================================
+           MOBILE
+        ====================================================== */
+
+        @media (max-width: 900px) {
+
+            .bio-hero {
+                min-height: 65vh;
+            }
+
+            .bio-section {
+                grid-template-columns: 1fr;
+
+                gap: 30px;
+            }
+
+            .bio-section-label {
+                padding-top: 0;
+            }
+
+        }
+
+
+        @media (max-width: 600px) {
+
+            .bio-hero {
+                min-height: 70vh;
+
+                padding-top: 130px;
+                padding-bottom: 70px;
+            }
+
+            .bio-hero::before {
+                top: 105px;
+                right: 10px;
+
+                font-size: 130px;
+            }
+
+            .bio-back {
+                margin-bottom: 80px;
+
+                font-size: 8px;
+            }
+
+            .bio-hero h1 {
+                font-size: clamp(65px, 20vw, 105px);
+            }
+
+            .bio-hero-intro {
+                margin-top: 40px;
+
+                font-size: 20px;
+            }
+
+            .bio-content {
+                padding-top: 90px;
+                padding-bottom: 90px;
+            }
+
+            .bio-section {
+                padding: 50px 0;
+            }
+
+            .bio-section-content h2 {
+                font-size: 44px;
+            }
+
+            .bio-section-content p {
+                font-size: 15px;
+            }
+
+            .bio-highlights {
+                grid-template-columns: 1fr;
+            }
+
+            .bio-quote p {
+                font-size: 43px;
+            }
+
+            .bio-closing h2 {
+                font-size: 62px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body class="bio-page">
+
+
+<!-- =========================================================
+     HEADER
+========================================================== -->
+
+<header class="site-header">
+
+    <nav class="nav-container">
+
+        <a href="index.html" class="logo">
+            Connor Montgomery
+        </a>
+
+        <div class="nav-links">
+
+            <a href="index.html#about">
+                About
+            </a>
+
+            <a href="index.html#work">
+                Work
+            </a>
+
+            <a href="index.html#experience">
+                Experience
+            </a>
+
+            <a href="index.html#contact">
+                Contact
+            </a>
+
+        </div>
+
+    </nav>
+
+</header>
+
+
+<!-- =========================================================
+     MAIN
+========================================================== -->
+
+<main>
+
+
+    <!-- =====================================================
+         BIO HERO
+    ====================================================== -->
+
+    <section class="bio-hero">
+
+        <div class="bio-hero-content">
+
+            <a href="index.html#about" class="bio-back">
+                ← Back to About
+            </a>
+
+            <p class="section-label">
+                ABOUT / FULL BIO
+            </p>
+
+            <h1>
+                A closer<br>
+                look.
+            </h1>
+
+            <p class="bio-hero-intro">
+                A longer look at the interests, experiences, and
+                questions that shape how I learn, build, and work.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         BIO CONTENT
+    ====================================================== -->
+
+    <div class="bio-content">
+
+
+        <!-- =================================================
+             SECTION 01
+        ================================================== -->
+
+        <section class="bio-section">
+
+            <div class="bio-section-label">
+                01 / BEGINNINGS
+            </div>
+
+            <div class="bio-section-content">
+
+                <h2>
+                    Where it<br>
+                    started.
+                </h2>
+
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur
+                    adipiscing elit. What began as a general
+                    curiosity about how things worked gradually
+                    became an interest in understanding the systems
+                    behind them.
+                </p>
+
+                <p>
+                    Integer posuere erat a ante venenatis dapibus
+                    posuere velit aliquet. From taking things apart
+                    to asking increasingly complicated questions,
+                    that curiosity became a recurring part of how I
+                    approached school, projects, and eventually
+                    research.
+                </p>
+
+                <p>
+                    Today, that same curiosity tends to lead in
+                    several directions at once. A question in one
+                    field often becomes an excuse to learn something
+                    from another.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             SECTION 02
+        ================================================== -->
+
+        <section class="bio-section">
+
+            <div class="bio-section-label">
+                02 / SCIENCE
+            </div>
+
+            <div class="bio-section-content">
+
+                <h2>
+                    Understanding<br>
+                    the universe.
+                </h2>
+
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur
+                    adipiscing elit. Astrophysics provides a way to
+                    investigate questions that are simultaneously
+                    mathematical, physical, computational, and
+                    observational.
+                </p>
+
+                <p>
+                    Sed posuere consectetur est at lobortis. Nullam
+                    quis risus eget urna mollis ornare vel eu leo.
+                    Working with simulations, observations, and
+                    computational models creates opportunities to
+                    connect theoretical ideas with measurable
+                    phenomena.
+                </p>
+
+                <p>
+                    My interests extend from the behavior of distant
+                    galaxies to the computational tools used to study
+                    them. I enjoy the process of moving from a broad
+                    scientific question toward something that can be
+                    modeled, tested, and investigated.
+                </p>
+
+                <div class="bio-highlights">
+
+                    <div class="bio-highlight">
+
+                        <span class="bio-highlight-label">
+                            INTEREST
+                        </span>
+
+                        <strong>
+                            Astrophysics
+                        </strong>
+
+                        <span>
+                            Galaxies · Cosmology · High-redshift
+                            systems
+                        </span>
+
+                    </div>
+
+                    <div class="bio-highlight">
+
+                        <span class="bio-highlight-label">
+                            APPROACH
+                        </span>
+
+                        <strong>
+                            Computational
+                        </strong>
+
+                        <span>
+                            Simulation · Modeling · Data analysis
+                        </span>
+
+                    </div>
+
+                    <div class="bio-highlight">
+
+                        <span class="bio-highlight-label">
+                            TOOLS
+                        </span>
+
+                        <strong>
+                            Scientific Computing
+                        </strong>
+
+                        <span>
+                            Python · Linux · HPC · Numerical methods
+                        </span>
+
+                    </div>
+
+                    <div class="bio-highlight">
+
+                        <span class="bio-highlight-label">
+                            QUESTIONS
+                        </span>
+
+                        <strong>
+                            Observation & Theory
+                        </strong>
+
+                        <span>
+                            Connecting models with measurable
+                            observations
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             SECTION 03
+        ================================================== -->
+
+        <section class="bio-section">
+
+            <div class="bio-section-label">
+                03 / ENGINEERING
+            </div>
+
+            <div class="bio-section-content">
+
+                <h2>
+                    Making things<br>
+                    real.
+                </h2>
+
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur
+                    adipiscing elit. Not every problem needs to
+                    remain on a screen. Building physical systems
+                    provides a different way of understanding the
+                    same questions.
+                </p>
+
+                <p>
+                    Cras mattis consectetur purus sit amet
+                    fermentum. I enjoy taking an idea from an
+                    initial sketch through modeling, fabrication,
+                    testing, and iteration.
+                </p>
+
+                <p>
+                    Engineering projects have also taught me to
+                    think carefully about constraints. Materials,
+                    tolerances, electronics, software, time, and
+                    safety all become part of the problem once an
+                    idea has to work outside of a notebook.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             SECTION 04
+        ================================================== -->
+
+        <section class="bio-section">
+
+            <div class="bio-section-label">
+                04 / LEARNING
+            </div>
+
+            <div class="bio-section-content">
+
+                <h2>
+                    Learning by<br>
+                    doing.
+                </h2>
+
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur
+                    adipiscing elit. Some of the most useful things
+                    I have learned have come from projects where I
+                    did not initially know how to solve the problem.
+                </p>
+
+                <p>
+                    Donec ullamcorper nulla non metus auctor
+                    fringilla. Debugging an unfamiliar codebase,
+                    figuring out an engineering constraint, or
+                    teaching myself a new technical tool can be just
+                    as valuable as the final result.
+                </p>
+
+                <p>
+                    That approach has made experimentation an
+                    important part of how I work. Build something.
+                    Test it. Find the part that does not make sense.
+                    Then figure out why.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             QUOTE / STATEMENT
+        ================================================== -->
+
+        <section class="bio-quote">
+
+            <p>
+                The interesting problems are often the ones
+                that sit <span>between</span> familiar categories.
+            </p>
+
+        </section>
+
+
+        <!-- =================================================
+             SECTION 05
+        ================================================== -->
+
+        <section class="bio-section">
+
+            <div class="bio-section-label">
+                05 / PEOPLE
+            </div>
+
+            <div class="bio-section-content">
+
+                <h2>
+                    Work is also<br>
+                    about people.
+                </h2>
+
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur
+                    adipiscing elit. Technical work rarely happens
+                    in isolation. Collaboration, communication, and
+                    the ability to explain an idea clearly are part
+                    of solving difficult problems.
+                </p>
+
+                <p>
+                    Maecenas faucibus mollis interdum. Leadership
+                    experiences have provided another perspective:
+                    sometimes the most useful contribution is not
+                    having the answer, but helping a group find one.
+                </p>
+
+                <p>
+                    I value environments where people can bring
+                    different backgrounds, interests, and ways of
+                    thinking to the same problem.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             SECTION 06
+        ================================================== -->
+
+        <section class="bio-section">
+
+            <div class="bio-section-label">
+                06 / OUTSIDE THE WORK
+            </div>
+
+            <div class="bio-section-content">
+
+                <h2>
+                    There is more<br>
+                    to learn.
+                </h2>
+
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur
+                    adipiscing elit. Outside of technical work, I
+                    enjoy finding things that force me to approach
+                    problems from a completely different direction.
+                </p>
+
+                <p>
+                    Integer posuere erat a ante venenatis dapibus
+                    posuere velit aliquet. Competition, performance,
+                    leadership, travel, and unfamiliar experiences
+                    have all provided different opportunities to
+                    develop skills that do not necessarily appear on
+                    a technical résumé.
+                </p>
+
+                <p>
+                    Those experiences matter because they change how
+                    I approach the work itself: with more curiosity,
+                    more patience, and a willingness to try something
+                    unfamiliar.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             CLOSING
+        ================================================== -->
+
+        <section class="bio-closing">
+
+            <p class="section-label">
+                07 / WHAT'S NEXT
+            </p>
+
+            <h2>
+                Still figuring<br>
+                it out.
+            </h2>
+
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing
+                elit. There are still considerably more questions
+                than answers, which is probably what makes the work
+                interesting.
+            </p>
+
+            <a
+                href="index.html#contact"
+                class="bio-contact-link"
+            >
+                <span>Get in touch</span>
+                <span aria-hidden="true">↗</span>
+            </a>
+
+        </section>
+
+
+    </div>
+
+</main>
+
+
+<!-- =========================================================
+     FOOTER
+========================================================== -->
+
+<footer class="site-footer">
+
+    <div class="footer-container">
+
+        <div>
+
+            <strong>
+                Connor Montgomery
+            </strong>
+
+            <span>
+                Astrophysics × Robotics × Exploration
+            </span>
+
+        </div>
+
+        <div class="footer-right">
+
+            <span>
+                © 2026 Connor D. Montgomery
+            </span>
+
+            <a href="index.html">
+                Back to home ↑
+            </a>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+</body>
+</html>
